@@ -19,3 +19,14 @@ arg_func(){
 }
 
 arg_func $@
+
+# []を使う場合は両端をワンスペース開けること
+change_with_args(){
+  if [ "$1" == "-r" ]; then
+    cd somewhere
+  elif [ "$1" == "-s" ]; then
+    cd anywhere
+  else
+    cd here
+  fi
+}
